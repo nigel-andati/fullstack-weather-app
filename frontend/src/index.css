@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+/* App shell: subtle gradient and readable typography */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 45%, #0b1220 100%);
+  color: #e2e8f0;
+}
+
+#root {
+  min-height: 100dvh;
+}

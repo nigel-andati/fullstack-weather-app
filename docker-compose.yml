@@ -1,0 +1,19 @@
+# PostgreSQL for local development. Schema runs automatically on first DB init.
+# Usage: docker compose up -d
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: weather-app-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: weather_app
+    ports:
+      - "5432:5432"
+    volumes:
+      - weather_pg_data:/var/lib/postgresql/data
+      - ./backend/db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+
+volumes:
+  weather_pg_data:

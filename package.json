@@ -1,0 +1,26 @@
+{
+  "name": "weather-app",
+  "private": true,
+  "description": "Full-stack weather app — see README Quick start",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "setup": "node scripts/setup-env.cjs",
+    "docker:install": "node scripts/install-docker.mjs",
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "start": "npm run dev",
+    "build": "npm run build --workspace=frontend",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:reset": "docker compose down -v && docker compose up -d"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "open": "^10.1.0"
+  }
+}
