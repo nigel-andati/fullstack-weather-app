@@ -1,13 +1,14 @@
 /**
  * Assessment disclosure: applicant name + PM Accelerator context (required for submission).
- * Set VITE_APPLICANT_NAME in frontend/.env (see repo .env.example).
+ * Optional override: VITE_APPLICANT_NAME in frontend/.env
  */
+const APPLICANT_DEFAULT = 'Nigel Andati'
+
 const LINKEDIN_PM_ACCELERATOR = 'https://www.linkedin.com/company/pmaccelerator'
 const WEBSITE = 'https://www.pmaccelerator.io'
 
 export default function SubmissionAbout() {
-  const applicantName =
-    import.meta.env.VITE_APPLICANT_NAME?.trim() || 'Applicant — set VITE_APPLICANT_NAME in frontend/.env'
+  const applicantName = import.meta.env.VITE_APPLICANT_NAME?.trim() || APPLICANT_DEFAULT
 
   return (
     <aside

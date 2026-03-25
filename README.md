@@ -9,7 +9,7 @@ Production-style weather dashboard with a React (Vite) frontend, Express API, da
 - **Dependencies:** see **[REQUIREMENTS.md](./REQUIREMENTS.md)** (human-readable list of all npm packages). Install with **`npm install`** from this folder.
 - **GitHub:** repo must be **public**, *or* **private** with collaborators **`community@pmaccelerator.io`** and **`hr@pmaccelerator.io`** (clone/download enabled).
 - **Demo video:** record 1–2 minutes (voice + screen): run the app, show weather + forecast + insights + saved records/export, and briefly mention the stack. See **[SUBMISSION.md](./SUBMISSION.md)** for a checklist and form hints.
-- **Your name on the app:** create `frontend/.env` with `VITE_APPLICANT_NAME=Your Full Name` (copy from `frontend/.env.example`). The UI includes a **Submission** section and **Product Manager Accelerator** summary with LinkedIn / website links for assessors.
+- **Your name on the app:** this submission defaults to **Nigel Andati** in the **Submission** footer; override with `VITE_APPLICANT_NAME` in `frontend/.env` if needed. The UI also includes **Product Manager Accelerator** context with LinkedIn / website links for assessors.
 
 ## Quick start (for anyone cloning the repo)
 
